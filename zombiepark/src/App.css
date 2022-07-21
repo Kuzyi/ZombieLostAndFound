@@ -7,6 +7,10 @@
   -webkit-text-stroke: 2px black;
   ;
 }
+button{
+  background-color:rgba(245, 247, 246, 0);
+  border: none; 
+}
 .App {
   text-align: center;
 }
