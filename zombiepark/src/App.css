@@ -1,20 +1,29 @@
+*{
+  background-image: url("https://img.freepik.com/premium-photo/cement-wall-texture-background_76539-221.jpg?w=2000");
+  font-family: 'Butcherman', cursive;
+  font-size: 5vh;
+  text-shadow: 10px 10px 5px black;
+  color: rgba(245, 247, 246, .8);
+  -webkit-text-stroke: 2px black;
+}
+button{
+  background-color:rgba(245, 247, 246, 0);
+  border: none;
+}
 .App {
   text-align: center;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
-  background-color: #282c34;
+  background-color: #282C34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -23,11 +32,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
-  color: #61dafb;
+  color: #61DAFB;
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

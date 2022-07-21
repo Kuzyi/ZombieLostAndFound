@@ -10,8 +10,8 @@ const App = () => {
   useEffect(() => {
     async function getList() {
       const lostItemInfo = await axios.get(`http://localhost:3001/items`) //might need /api infront of /items
-      setLostItems(lostItemInfo)
-      console.log(lostItemInfo)
+      setLostItems(lostItemInfo.data)
+      console.log(lostItemInfo.data)
     }
     getList()
   }, [])
