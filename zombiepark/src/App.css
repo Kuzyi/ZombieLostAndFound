@@ -1,6 +1,11 @@
 *{
   background-image: url "https://img.freepik.com/premium-photo/cement-wall-texture-background_76539-221.jpg?w=2000";
   font-family: 'Butcherman', cursive;
+  font-size: 5vh;
+  text-shadow: 10px 10px 5px black;
+  color: rgba(245, 247, 246, .8);
+  -webkit-text-stroke: 2px black;
+  ;
 }
 .App {
   text-align: center;
