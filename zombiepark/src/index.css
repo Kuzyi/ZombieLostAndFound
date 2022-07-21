@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+    background-image: url(https://img.freepik.com/free-photo/grunge-wall-texture_1194-6108.jpg?w=1380&t=st=1658427700~exp=1658428300~hmac=c90a108d3c1ffbd43e001f33a78fb4b953c5d4407ea4b4696402945e9af69507);
+  
 }
 
 code {
