@@ -21,7 +21,7 @@ const App = () => {
       <h1>What did you lose?</h1>
       {<InputLostItems />}
       <h1>List of lost items</h1>
-      {lostItems.map((lostItem) => (
+      {lostItems.map(lostItem => (
         <ListLostItems
           key={lostItem.name}
           name={lostItem.name}
