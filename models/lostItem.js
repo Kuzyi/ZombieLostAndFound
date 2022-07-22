@@ -3,9 +3,9 @@ const Schema = mongoose.Schema
 
 const LostItem = new Schema(
   {
-    name: { type: String, required: true },
-    description: { type: String, required: true },
-    dateLost: { type: String, required: true }
+    name: { type: String, required: true }
+    // description: { type: String, required: true },
+    // dateLost: { type: String, required: true }
   },
   { timestamps: true }
 )

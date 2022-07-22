@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 const InputLostItems = (props) => {
-  const [calcDisplay, setCalcDisplay] = useState("")
   const [userEntry1, setUserEntry1] = useState("")
   const [userEntry2, setUserEntry2] = useState("")
   const [userEntry3, setUserEntry3] = useState("")
@@ -27,6 +26,8 @@ const InputLostItems = (props) => {
   }
 
 
+
+
   return(
 <div className="container">
   <div className="add">
@@ -43,12 +44,11 @@ const InputLostItems = (props) => {
   onChange={(e) => handleDescription(e, 'num2')} />
   <input   type="String"
   name="num3"
-  placeholder="Give us a date"
+  placeholder="MM-DD-YYYY"
   value={userEntry3}
   onChange={(e) => handleDate(e, 'num3')} />
-    <button onClick={() => setCalcDisplay(parseInt(userEntry1,10) + parseInt(userEntry2,10))}>Submit Lost Item</button>
+    <button >Submit Lost Item</button>
   </div>
-  <h3 className="results">{calcDisplay}</h3>
 </div>
 )
 }
