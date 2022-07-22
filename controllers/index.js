@@ -11,7 +11,7 @@ const getAllItems = async (req, res) => {
 
 const createNewLost = async (req, res) => {
   try {
-    const item = await new LostItem({ name: `${req.params.id}` })
+    const item = await new LostItem(req.body)
     await item.save()
     return res.status(201).json({
       item
