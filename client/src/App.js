@@ -25,8 +25,8 @@ const App = () => {
         <ListLostItems
           key={lostItem.name}
           name={lostItem.name}
-          // description={lostItem.description}
-          // date={lostItem.dateLost}
+          description={lostItem.description}
+          date={lostItem.dateLost}
         />
       ))}
     </div>
