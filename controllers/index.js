@@ -11,11 +11,13 @@ const getAllItems = async (req, res) => {
 
 const createNewLost = async (req, res) => {
   try {
-    const newItem = await new LostItem(req.body)
-    await newItem.save()
-    return res.status(201).json({ newItem })
+    const item = await new LostItem({ name: `${req.params.id}` })
+    await item.save()
+    return res.status(201).json({
+      item
+    })
   } catch (error) {
-    return res.status(501).json({ error: error.message })
+    return res.status(500).json({ error: error.message })
   }
 }
 
