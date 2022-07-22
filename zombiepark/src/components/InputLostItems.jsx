@@ -1,9 +1,9 @@
 import { useState } from 'react'
-
+import axios from 'axios'
 const InputLostItems = (props) => {
-  const [userEntry1, setUserEntry1] = useState("")
-  const [userEntry2, setUserEntry2] = useState("")
-  const [userEntry3, setUserEntry3] = useState("")
+  const [lostItem, setUserEntry1] = useState("")
+  const [description, setUserEntry2] = useState("")
+  const [date, setUserEntry3] = useState("")
 
 
   const handleLostItem = (e, num) => {
@@ -25,6 +25,23 @@ const InputLostItems = (props) => {
 
   }
 
+  const handleSubmit = async(e)=>{
+    let formData = {
+      name: lostItem,
+      description: description,
+      dateLost: date
+    }
+    let res = await axios.post('http://localhost:3001/items', formData)
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    console.log(res)
+    
+  }
+
 
 
 
@@ -34,20 +51,20 @@ const InputLostItems = (props) => {
     <input   type="String"
   name="num1"
   placeholder="Tell us what you lost"
-  value={userEntry1}
+  value={lostItem}
   onChange={(e) => handleLostItem(e, 'num1')} />
     <span>             </span>
     <input   type="String"
   name="num2"
   placeholder="Give us a description please"
-  value={userEntry2}
+  value={description}
   onChange={(e) => handleDescription(e, 'num2')} />
   <input   type="String"
   name="num3"
   placeholder="MM-DD-YYYY"
-  value={userEntry3}
+  value={date}
   onChange={(e) => handleDate(e, 'num3')} />
-    <button >Submit Lost Item</button>
+    <button onClick={handleSubmit} >Submit Lost Item</button>
   </div>
 </div>
 )
